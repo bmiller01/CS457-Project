@@ -1,3 +1,5 @@
+```mermaid
+stateDiagram-v2
     [*] --> INIT
     INIT --> WAITING_FOR_PLAYERS : Server started and listening for connections
     WAITING_FOR_PLAYERS --> START_GAME : 2 clients connected to server
@@ -27,3 +29,4 @@
     GAME_OVER --> CLEAN_UP : Broadcast final scores and message
     CLEAN_UP --> WAITING_FOR_PLAYERS : Reset for next game
     CLEAN_UP --> [*] : Disconnect
+```
