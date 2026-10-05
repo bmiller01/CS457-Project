@@ -9,7 +9,7 @@
 - **Transport Protocol:** TCP
 - **Serialization Format:** Text Delimited Protocol
 - **Message Types & Structured Schema Definitions:**  
-    ####`JOIN` (Client -> Server)
+    #### `JOIN` (Client -> Server)
        **Description:** Client requests to join the game  
        **Format:** `MSG_TYPE|<PLAYER_ID>|<TIMESTAMP>\n`  
        **Example:** `JOIN|Alice|1727000000\n`  
