@@ -1,4 +1,4 @@
-[*] --> INIT
+    [*] --> INIT
     INIT --> WAITING_FOR_PLAYERS : Server started and listening for connections
     WAITING_FOR_PLAYERS --> START_GAME : 2 clients connected to server
     WAITING_FOR_PLAYERS --> CLEAN_UP : Client disconnects before game starts
