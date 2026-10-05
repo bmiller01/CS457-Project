@@ -9,13 +9,13 @@
 - **Transport Protocol:** TCP
 - **Serialization Format:** Text Delimited Protocol
 - **Message Types & Structured Schema Definitions:**  
-    `JOIN` (Client -> Server): Client requests to join the game
-       Format: MSG_TYPE|<PLAYER_ID>|<TIMESTAMP>\n
-       Example: JOIN|Alice|1727000000\n
-       Fields:
-            - MSG_TYPE  (string): "JOIN"
-            - PLAYER_ID (string): alphanumeric value to identify player that wants to join
-            - TIMESTAMP (integer): Unix epoch timestamp seconds
+    `JOIN` (Client -> Server): Client requests to join the game  
+       Format: MSG_TYPE|<PLAYER_ID>|<TIMESTAMP>\n  
+       Example: JOIN|Alice|1727000000\n  
+       Fields:  
+            - MSG_TYPE  (string): "JOIN"  
+            - PLAYER_ID (string): alphanumeric value to identify player that wants to join  
+            - TIMESTAMP (integer): Unix epoch timestamp seconds  
 
 
     `LOBBY_WAIT` (Server -> Client): Server notifies exisiting client that it's waiting for another client to connect
