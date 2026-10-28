@@ -1,11 +1,10 @@
 
-# Brianna Miller
-# CS457: Computer Networks and the Internet
-# 10-17-2026
-# Sprint 2: Game Behavior & Server Concurrency Architecture Design
+**Brianna Miller
+**CS457: Computer Networks and the Internet
+**Sprint 2: Game Behavior & Server Concurrency Architecture Design
 
-## Detailed Architecture Specifications
-### 1. Server Concurrency Model Selection
+### Detailed Architecture Specifications
+#### 1. Server Concurrency Model Selection
 This trivia game will use multithreading with a main thread for the server and two worker threads, one for each client socket. 
 Having seperate threads for each client will allow them to communicate with the server at the same time. The server will then be able to queue their requests before processing them in the game. Since the server is responsible for managing the shared resources in memory and preventing race conditions it can use a threading.Lock to coordinate access to resources that the threads could access at the same time.<br> 
 The server will initalize the game state then listen for incoming connections. When a client connects to the server, the server will accept the connection and create a worker thread associated with that client. Then the server will register that client by adding their information to the game setup and creating a player name (e.g, player1 and player2). Once both clients are registered the game can begin. 
@@ -16,7 +15,7 @@ If a player fails to answer a question within the round's time limit then a TIME
 Once the game is complete and winner is determined, the server will broadcast the final scores by sending a GAME_OVER message. If a client indicates they want to quit by sending a QUIT message, then the server can begin handling the worker thread teardowns, closing the client connections and releasing the game's shared resources to end the game safely. Otherwise, the server will reset the game state and for the next game.
 
 
-### 3. Mermaid Sequence Diagram
+#### 3. Mermaid Sequence Diagram
 ```mermaid
 sequenceDiagram
     participant Client1
