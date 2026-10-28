@@ -1,7 +1,7 @@
 
-**Brianna Miller<br>
-**CS457: Computer Networks and the Internet<br>
-**Sprint 2: Game Behavior & Server Concurrency Architecture Design<br>
+** Brianna Miller<br>
+** CS457: Computer Networks and the Internet<br>
+** Sprint 2: Game Behavior & Server Concurrency Architecture Design<br>
 
 
 ### Detailed Architecture Specifications
