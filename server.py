@@ -140,8 +140,8 @@ def main():
     parser.add_argument("-p", "--port", type=int, required=True,
                         help="TCP port on which the server listens")
     args = parser.parse_args()
-    if not 1 <= args.port <= 65535:
-        parser.error("port must be between 1 and 65535")
+    if not 1024 <= args.port <= 65535:
+        parser.error("port must be between 1024 and 65535")
 
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
