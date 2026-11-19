@@ -28,8 +28,8 @@ def send_message(sock, *fields):
 
 def main():
     args = parse_args()
-    if not 1 <= args.port <= 65535:
-        print("[ERROR] Port must be between 1 and 65535.")
+    if not 1024 <= args.port <= 65535:
+        print("[ERROR] Port must be between 1024 and 65535.")
         return 1
 
     try:
